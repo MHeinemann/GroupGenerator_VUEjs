@@ -1,0 +1,62 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+h1, h2 {
+  font-weight: normal;
+}
+
+nav ul, #welcome ul {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+a {
+  color: #42b983;
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+
+  display: grid;
+  grid-template-rows:300px 1fr 100px;
+  grid-template-columns:25% 25% 25% 25%;
+  grid-template-areas:
+  "header header header header"
+  "main main main aside"
+  "footer footer footer footer"
+  ;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+aside{
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.contacted{
+  text-decoration: line-through;
+}

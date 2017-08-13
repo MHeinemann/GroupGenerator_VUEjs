@@ -1,65 +1,46 @@
 <template lang="html">
   <main id="users">
     <h1>{{ title }}</h1>
-    <form v-on:submit="addUser">
-      <input type="text" v-model="newUser.name" placeholder="Enter Name"/>
-      <br />
-      <input type="text" v-model="newUser.email" placeholder="Enter Email"/>
-      <br />
-      <input type="submit" value="Submit">
-    </form>
-    <ul>
-      <li v-for="user in users">
-        <input type="checkbox" class="toggle" v-model="user.contacted">
-        <span :class="{contacted: user.contacted}">{{ user.name }}: {{ user.email }}</span>
-        <button type="button" v-on:click="deleteUser(user)">x</button>
+    {{ azubis[1].name }}
+    <ol>
+      <li v-for="azubi in randomAzubis">
+        {{ azubi.name }}
       </li>
-    </ul>
+    </ol>
+    <button v-on:click="randomize">Shuffle</button>
   </main>
 </template>
 
 <script>
+import Json from './../assets/members.json';
+//https://stackoverflow.com/questions/45157579/vue-js-methods-vs-computed-properties-how-they-interact-with-the-dom
+//https://codingexplained.com/coding/front-end/vue-js/optimizing-performance-computed-properties
+//https://forum.vuejs.org/t/how-to-make-computed-property-notice-change-in-arrays-objects-property/5358
 export default {
-  name: 'users',
   data() {
     return {
-      title: "Users",
-      newUser: {},
-      users: [
-        {
-          name: "John Doe",
-          email: 'jdoe@gmail.com',
-          contacted: false
-        },
-        {
-          name: "Max Musetermann",
-          email: 'mm@gmail.com',
-          contacted: false
-        },
-        {
-          name: "Tina Turner",
-          email: 'tt@gmail.com',
-          contacted: false
-        },
-        {
-          name: "Bums Kuh",
-          email: 'bk@gmail.com',
-          contacted: false
-        },
-      ]
-    }
+      title: 'Gruppenzusammenstellung',
+      azubis : Json.azubis
+    };
   },
   methods: {
-    addUser: function(e){
-      this.users.push({
-        name: this.newUser.name,
-        email: this.newUser.email,
-        contacted: false
-      })
-      e.preventDefault();
-    },
-    deleteUser: function(user){
-      this.users.splice(this.users.indexOf(user), 1);
+    randomize: function(a, b){
+      function shuffle() {
+        //return( parseInt( Math.random()*10 ) %2 );
+        return (Math.round(Math.random())-0.5);
+        //return 0.5 - Math.random();
+      }
+      return this.azubis.sort(shuffle);
+    }
+  },
+  computed: {
+    randomAzubis: function(a, b){
+      function shuffle() {
+        //return( parseInt( Math.random()*10 ) %2 );
+        return (Math.round(Math.random())-0.5);
+        //return 0.5 - Math.random();
+      }
+      return this.azubis.sort(shuffle);
     }
   }
 }

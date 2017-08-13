@@ -13,7 +13,7 @@
   </header>
 
     <router-view></router-view>
-    <sidebar></sidebar>
+
     <footer>
       <ul>
         <li>
@@ -29,10 +29,4 @@
 
 
 <script>
-import Sidebar from './components/Sidebar'
-export default {
-  components: {
-    'sidebar': Sidebar
-  }
-}
 </script>

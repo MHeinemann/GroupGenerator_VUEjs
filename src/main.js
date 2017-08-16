@@ -5,15 +5,27 @@ import VueRouter from 'vue-router';
 import App from './App';
 import Hello from './components/Hello';
 import Users from './components/Users';
-import Test from './components/Test';
+import Groups from './components/Groups';
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', component: Hello },
-  { path: '/users', component: Users },
-  { path: '/test/:myId', component: Test },
+  {
+    path: '/',
+    name: "Hello",
+    component: Hello
+  },
+  {
+    path: '/users',
+    name: 'Users',
+    component: Users
+  },
+  {
+    path: '/groups',
+    name: 'Groups',
+    component: Groups
+  },
 ];
 
 const router = new VueRouter({

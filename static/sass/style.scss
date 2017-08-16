@@ -5,13 +5,16 @@
 
 @import "compass/reset";
 
+$brandcolor: #42b983;
+
+
 h1{
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-nav ul, #welcome ul {
+nav ul{
   list-style-type: none;
   padding: 0;
 
@@ -22,7 +25,13 @@ nav ul, #welcome ul {
 }
 
 a {
-  color: #42b983;
+  color: $brandcolor;
+  text-decoration: none;
+
+  &:hover{
+    color: darken($brandcolor, 20%);
+    text-decoration: underline;
+  }
 }
 
 #app {
@@ -33,7 +42,7 @@ a {
   margin-top: 60px;
 
   display: grid;
-  grid-template-rows:300px 1fr 100px;
+  grid-template-rows:100px 1fr 100px;
   grid-template-columns:25% 50% 25%;
   grid-template-areas:
   ". header ."
@@ -47,10 +56,6 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  img{
-    width: 15rem;
-    height: auto;
-  }
 }
 
 main {
@@ -58,11 +63,6 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-ol{
-  margin-left: 1rem;
-  list-style-type: decimal;
 }
 
 aside{
@@ -80,4 +80,17 @@ footer {
 
 .contacted{
   text-decoration: line-through;
+}
+
+#groups{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li{
+      box-sizing: border-box;
+      padding: 1rem;
+      border: 1px solid black;
+      text-align: center;
+  }
 }

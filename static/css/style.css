@@ -67,30 +67,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 8, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
 h1 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-/* line 14, ../sass/style.scss */
-nav ul, #welcome ul {
+/* line 17, ../sass/style.scss */
+nav ul {
   list-style-type: none;
   padding: 0;
 }
-/* line 18, ../sass/style.scss */
-nav ul li, #welcome ul li {
+/* line 21, ../sass/style.scss */
+nav ul li {
   display: inline-block;
   margin: 0 10px;
 }
 
-/* line 24, ../sass/style.scss */
+/* line 27, ../sass/style.scss */
 a {
   color: #42b983;
+  text-decoration: none;
+}
+/* line 31, ../sass/style.scss */
+a:hover {
+  color: #276e4e;
+  text-decoration: underline;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -98,36 +104,25 @@ a {
   color: #2c3e50;
   margin-top: 60px;
   display: grid;
-  grid-template-rows: 300px 1fr 100px;
+  grid-template-rows: 100px 1fr 100px;
   grid-template-columns: 25% 50% 25%;
   grid-template-areas: ". header ." ". main ." ". footer .";
 }
 
-/* line 45, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 header {
   grid-area: header;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-/* line 50, ../sass/style.scss */
-header img {
-  width: 15rem;
-  height: auto;
-}
 
-/* line 56, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 main {
   grid-area: main;
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-/* line 63, ../sass/style.scss */
-ol {
-  margin-left: 1rem;
-  list-style-type: decimal;
 }
 
 /* line 68, ../sass/style.scss */
@@ -148,4 +143,18 @@ footer {
 /* line 81, ../sass/style.scss */
 .contacted {
   text-decoration: line-through;
+}
+
+/* line 85, ../sass/style.scss */
+#groups {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* line 90, ../sass/style.scss */
+#groups li {
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 1px solid black;
+  text-align: center;
 }

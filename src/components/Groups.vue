@@ -1,22 +1,65 @@
 <template lang="html">
-  <main>
-    <h1>{{ name }}</h1>
+  <main id="users">
+    <h1>{{ title }}</h1>
+    <ul id="groups" :class="['groupSize--'+groupSize]">
+        <li class="singleMember" v-for="(azubi, index) in azubis" v-bind:style="{ 'width': fullNumber }" v-bind:class="{'solo': azubis.length%groupSize!=0&&index==azubis.length-1}">
+        {{ azubi.name }}
+      </li>
+    </ul>
 
+    <label for="groupInput">Gruppengröße:</label>
+    <input id="groupInput" type="number" name="points" min="1" max="5" value="groupSize" v-model.number="groupSize">
+
+    <button v-on:click="randomize()">Shuffle</button>
+    <button v-on:click="changeOrder()">Tausch</button>
+
+    <input type="checkbox" id="zeigeCode" v-model="checked"><label for="zeigeCode">zeige json</label>
+
+    <br>
+    <code v-if="checked">
+      {<br>
+        &nbsp;&nbsp;"azubis": [<br>
+        <p v-for="(azubi, index) in azubis">&nbsp;&nbsp;&nbsp;&nbsp;{ "name" : "{{azubi.name}}" }<span v-if="index != (azubis.length-1)">,</span></p><br>
+        &nbsp;&nbsp;]<br>
+      }
+    </code>
   </main>
 </template>
 
 <script>
+import Json from './../assets/members.json';
+
 export default {
   name: 'groups',
   data() {
     return {
-      title: 'Hello World',
-    }
+      title: 'Gruppenzusammenstellung',
+      azubis: Json.azubis,
+      groupSize: 5,
+      width: 100 +'%',
+      checked: false
+    };
   },
   methods: {
-    
+    randomize: function(a, b){
+      function shuffle() {
+        //return( parseInt( Math.random()*10 ) %2 );
+        return (Math.round(Math.random())-0.5);
+        //return 0.5 - Math.random();´
+      }
+      return this.azubis.sort(shuffle);
+    },
+    changeOrder(){
+      for(var i = 1; i < this.groupSize; i++){
+        var tmpName = this.azubis.pop().name;
+        this.azubis.unshift({name: tmpName});
+      }
+    }
   },
   computed: {
+    fullNumber: function(){
+      return (100/this.groupSize)+'%';
+    }
   }
 }
 </script>

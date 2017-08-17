@@ -1,0 +1,69 @@
+$brandcolor: #42b983;
+
+h1{
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+nav ul{
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+a {
+  color: $brandcolor;
+  text-decoration: none;
+
+  &:hover{
+    color: darken($brandcolor, 20%);
+    text-decoration: underline;
+  }
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin-top: 60px;
+
+  display: grid;
+  grid-template-rows:100px 1fr 100px;
+  grid-template-columns:20% 60% 20%;
+  grid-template-areas:
+  ". header ."
+  ". main ."
+  ". footer ."
+  ;
+}
+
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  grid-area: main;
+}
+
+aside{
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contacted{
+  text-decoration: line-through;
+}

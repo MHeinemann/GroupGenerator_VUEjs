@@ -1,7 +1,7 @@
 /* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+* In this file you should write your main styles. (or centralize your imports)
+* Import this file using the following HTML or equivalent:
+* <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 5, ../../../../../../var/lib/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -67,36 +67,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 11, ../sass/style.scss */
+/* line 3, ../sass/layout.scss */
 h1 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-/* line 17, ../sass/style.scss */
+/* line 9, ../sass/layout.scss */
 nav ul {
   list-style-type: none;
   padding: 0;
 }
-/* line 21, ../sass/style.scss */
+/* line 13, ../sass/layout.scss */
 nav ul li {
   display: inline-block;
   margin: 0 10px;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 19, ../sass/layout.scss */
 a {
   color: #42b983;
   text-decoration: none;
 }
-/* line 31, ../sass/style.scss */
+/* line 23, ../sass/layout.scss */
 a:hover {
   color: #276e4e;
   text-decoration: underline;
 }
 
-/* line 37, ../sass/style.scss */
+/* line 29, ../sass/layout.scss */
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -105,11 +105,11 @@ a:hover {
   margin-top: 60px;
   display: grid;
   grid-template-rows: 100px 1fr 100px;
-  grid-template-columns: 25% 50% 25%;
+  grid-template-columns: 20% 60% 20%;
   grid-template-areas: ". header ." ". main ." ". footer .";
 }
 
-/* line 54, ../sass/style.scss */
+/* line 46, ../sass/layout.scss */
 header {
   grid-area: header;
   display: flex;
@@ -117,44 +117,160 @@ header {
   flex-direction: column;
 }
 
-/* line 61, ../sass/style.scss */
+/* line 53, ../sass/layout.scss */
 main {
   grid-area: main;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
-/* line 68, ../sass/style.scss */
+/* line 57, ../sass/layout.scss */
 aside {
   grid-area: aside;
 }
 
-/* line 72, ../sass/style.scss */
+/* line 61, ../sass/layout.scss */
 footer {
   grid-area: footer;
   display: flex;
   justify-content: flex-end;
-  margin-top: 1rem;
-  border-top: 1px solid gray;
-  padding: 1rem;
 }
 
-/* line 81, ../sass/style.scss */
+/* line 67, ../sass/layout.scss */
 .contacted {
   text-decoration: line-through;
 }
 
-/* line 85, ../sass/style.scss */
+/* line 1, ../sass/groups.scss */
 #groups {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
-/* line 90, ../sass/style.scss */
+/* line 6, ../sass/groups.scss */
 #groups li {
   box-sizing: border-box;
+}
+/* line 11, ../sass/groups.scss */
+#groups.groupSize--1 li {
   padding: 1rem;
   border: 1px solid black;
   text-align: center;
+  margin: 0.3rem;
+}
+/* line 19, ../sass/groups.scss */
+#groups.groupSize--2 {
+  background-color: white;
+}
+/* line 22, ../sass/groups.scss */
+#groups.groupSize--2 li {
+  margin-bottom: 1.3rem;
+  padding: 1rem 3rem;
+}
+/* line 27, ../sass/groups.scss */
+#groups.groupSize--2 li:nth-of-type(odd) {
+  border: 15px solid black;
+  border-right: 0;
+  background-color: AliceBlue;
+}
+/* line 33, ../sass/groups.scss */
+#groups.groupSize--2 li:nth-of-type(even) {
+  border: 15px solid blue;
+  text-align: right;
+  border-left: 0;
+  background-color: AliceBlue;
+}
+/* line 40, ../sass/groups.scss */
+#groups.groupSize--2 li.solo {
+  border: 15px solid red;
+}
+/* line 45, ../sass/groups.scss */
+#groups.groupSize--3 {
+  background-color: white;
+}
+/* line 48, ../sass/groups.scss */
+#groups.groupSize--3 li {
+  margin-bottom: 1.3rem;
+  padding: 1rem 3rem;
+}
+/* line 53, ../sass/groups.scss */
+#groups.groupSize--3 li:nth-of-type(3n+1) {
+  border: 15px solid black;
+  border-right: 0;
+  background-color: AliceBlue;
+}
+/* line 59, ../sass/groups.scss */
+#groups.groupSize--3 li:nth-of-type(3n+2) {
+  border: 15px solid red;
+  border-right: 0;
+  border-left: 0;
+  text-align: center;
+  background-color: AliceBlue;
+}
+/* line 67, ../sass/groups.scss */
+#groups.groupSize--3 li:nth-of-type(3n+3) {
+  border: 15px solid green;
+  border-left: 0;
+  text-align: right;
+  background-color: AliceBlue;
+}
+/* line 74, ../sass/groups.scss */
+#groups.groupSize--3 li.solo {
+  border-right: 15px solid red;
+}
+/* line 80, ../sass/groups.scss */
+#groups.groupSize--4 li {
+  margin-bottom: 1.3rem;
+  padding: 1rem 3rem;
+}
+/* line 85, ../sass/groups.scss */
+#groups.groupSize--4 li:nth-of-type(4n+1) {
+  border: 15px solid black;
+  border-right: 0;
+  background-color: AliceBlue;
+}
+/* line 91, ../sass/groups.scss */
+#groups.groupSize--4 li:nth-of-type(4n+2), #groups.groupSize--4 li:nth-of-type(4n+3) {
+  border: 15px solid red;
+  border-left: 0;
+  text-align: center;
+  border-right: 0;
+  background-color: AliceBlue;
+}
+/* line 100, ../sass/groups.scss */
+#groups.groupSize--4 li:nth-of-type(4n+4) {
+  border: 15px solid brown;
+  border-left: 0;
+  text-align: right;
+  background-color: AliceBlue;
+}
+/* line 107, ../sass/groups.scss */
+#groups.groupSize--4 li.solo {
+  border-right: 15px solid brown;
+}
+/* line 113, ../sass/groups.scss */
+#groups.groupSize--5 li {
+  margin-bottom: 1.3rem;
+  padding: 1rem 3rem;
+}
+/* line 118, ../sass/groups.scss */
+#groups.groupSize--5 li:nth-of-type(5n+1) {
+  border: 15px solid black;
+  border-right: 0;
+  background-color: AliceBlue;
+}
+/* line 124, ../sass/groups.scss */
+#groups.groupSize--5 li:nth-of-type(5n+2), #groups.groupSize--5 li:nth-of-type(5n+3), #groups.groupSize--5 li:nth-of-type(5n+4) {
+  border: 15px solid red;
+  border-left: 0;
+  border-right: 0;
+  background-color: AliceBlue;
+}
+/* line 132, ../sass/groups.scss */
+#groups.groupSize--5 li:nth-of-type(5n+5) {
+  border: 15px solid brown;
+  border-left: 0;
+  background-color: AliceBlue;
+}
+/* line 138, ../sass/groups.scss */
+#groups.groupSize--5 li.solo {
+  border-right: 15px solid red;
 }

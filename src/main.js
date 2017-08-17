@@ -3,8 +3,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App';
-import Hello from './components/Hello';
-import Users from './components/Users';
 import Groups from './components/Groups';
 
 Vue.config.productionTip = false;
@@ -13,17 +11,7 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: "Hello",
-    component: Hello
-  },
-  {
-    path: '/users',
-    name: 'Users',
-    component: Users
-  },
-  {
-    path: '/groups',
-    name: 'Groups',
+    name: "Groups",
     component: Groups
   },
 ];

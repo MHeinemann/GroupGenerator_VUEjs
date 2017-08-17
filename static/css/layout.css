@@ -1,0 +1,71 @@
+/* line 3, ../sass/layout.scss */
+h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* line 9, ../sass/layout.scss */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+/* line 13, ../sass/layout.scss */
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* line 19, ../sass/layout.scss */
+a {
+  color: #42b983;
+  text-decoration: none;
+}
+/* line 23, ../sass/layout.scss */
+a:hover {
+  color: #276e4e;
+  text-decoration: underline;
+}
+
+/* line 29, ../sass/layout.scss */
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin-top: 60px;
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-areas: ". header ." ". main ." ". footer .";
+}
+
+/* line 46, ../sass/layout.scss */
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* line 53, ../sass/layout.scss */
+main {
+  grid-area: main;
+}
+
+/* line 57, ../sass/layout.scss */
+aside {
+  grid-area: aside;
+}
+
+/* line 61, ../sass/layout.scss */
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* line 67, ../sass/layout.scss */
+.contacted {
+  text-decoration: line-through;
+}

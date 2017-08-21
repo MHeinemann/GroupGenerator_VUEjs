@@ -35,7 +35,7 @@ export default {
     return {
       title: 'Gruppenzusammenstellung',
       azubis: Json.azubis,
-      groupSize: 5,
+      groupSize: 2,
       width: 100 +'%',
       checked: false
     };
@@ -50,9 +50,22 @@ export default {
       return this.azubis.sort(shuffle);
     },
     changeOrder(){
-      for(var i = 1; i < this.groupSize; i++){
-        var tmpName = this.azubis.pop().name;
-        this.azubis.unshift({name: tmpName});
+      if(this.groupSize>2){
+        for(var i = 1; i < this.groupSize*2+1; i++){
+          var tmpAzubi = this.azubis.pop().name;
+          this.azubis.unshift({name: tmpAzubi});
+        }
+
+        var mid = parseInt(this.azubis.length/2)
+        var firstAzubi = this.azubis[0];
+        var midAzubi = this.azubis[mid];
+        this.$set(this.azubis, 0, midAzubi);
+        this.$set(this.azubis, mid, firstAzubi);
+      }else{
+        for(var i = 1; i < this.groupSize; i++){
+          var tmpAzubi = this.azubis.pop().name;
+          this.azubis.unshift({name: tmpAzubi});
+        }
       }
     }
   },

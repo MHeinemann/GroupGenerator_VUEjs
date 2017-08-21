@@ -1,15 +1,14 @@
 {
   "azubis": [
-    { "name" : "Katrin heinemann" },
-    { "name" : "Michael heinemann" },
-    { "name" : "John Doe" },
-    { "name" : "Peter Pan" },
-    { "name" : "Femke Thalmann" },
-    { "name" : "Paul Panzer" },
-    { "name" : "Johannes Kranz" },
-    { "name" : "Bila Bong" },
-    { "name" : "Knight Rider" },
-    { "name" : "Bla Blub" },
-    { "name" : "Kanu Kaba" }
+    { "name" : "A" },
+    { "name" : "A" },
+    { "name" : "B" },
+    { "name" : "B" },
+    { "name" : "C" },
+    { "name" : "C" },
+    { "name" : "D" },
+    { "name" : "D" },
+    { "name" : "E" },
+    { "name" : "E" }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "azubis": [
-    { "name" : "A" },
+    { "name" : "Michael" },
     { "name" : "A" },
     { "name" : "B" },
     { "name" : "B" },
@@ -9,6 +9,7 @@
     { "name" : "D" },
     { "name" : "D" },
     { "name" : "E" },
-    { "name" : "E" }
+    { "name" : "Josh" },
+    { "name" : "F" }
   ]
 }

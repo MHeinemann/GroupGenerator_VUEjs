@@ -5,19 +5,19 @@
 
   li{
     box-sizing: border-box;
+    background-color: AliceBlue;
   }
 
   &.groupSize--1{
     li{
       padding: 1rem;
-      border: 1px solid black;
+      border: 3px solid $brandcolor;
       text-align: center;
       margin: 0.3rem;
     }
   }
 
   &.groupSize--2 {
-    background-color: white;
 
     li{
       margin-bottom: 1.3rem;
@@ -25,25 +25,22 @@
     }
 
     li:nth-of-type(odd){
-      border: 15px solid black;
+      border: 15px solid $brandcolor;
       border-right: 0;
-      background-color: AliceBlue;
     }
 
     li:nth-of-type(even){
-      border: 15px solid blue;
+      border: 15px solid lighten($brandcolor, 25%);
       text-align: right;
       border-left: 0;
-      background-color: AliceBlue;
     }
 
     li.solo{
-      border: 15px solid red;
+      border-right: 15px solid lighten($brandcolor, 25%);
     }
   }
 
   &.groupSize--3 {
-    background-color: white;
 
     li{
       margin-bottom: 1.3rem;
@@ -51,28 +48,25 @@
     }
 
     li:nth-of-type(3n+1){
-      border: 15px solid black;
+      border: 15px solid $brandcolor;
       border-right: 0;
-      background-color: AliceBlue;
     }
 
     li:nth-of-type(3n+2){
-      border: 15px solid red;
+      border: 15px solid lighten($brandcolor, 25%);
       border-right: 0;
       border-left: 0;
       text-align: center;
-      background-color: AliceBlue;
     }
 
     li:nth-of-type(3n+3){
-      border: 15px solid green;
+      border: 15px solid lighten($brandcolor, 35%);
       border-left: 0;
       text-align: right;
-      background-color: AliceBlue;
     }
 
     li.solo{
-      border-right: 15px solid red;
+      border-right: 15px solid lighten($brandcolor, 35%);
     }
   }
 
@@ -83,29 +77,26 @@
     }
 
     li:nth-of-type(4n+1){
-      border: 15px solid black;
+      border: 15px solid $brandcolor;
       border-right: 0;
-      background-color: AliceBlue;
     }
 
     li:nth-of-type(4n+2), li:nth-of-type(4n+3){
-      border: 15px solid red;
+      border: 15px solid lighten($brandcolor, 25%);
       border-left: 0;
       text-align: center;
       border-right: 0;
-      background-color: AliceBlue;
     }
 
 
     li:nth-of-type(4n+4){
-      border: 15px solid brown;
+      border: 15px solid lighten($brandcolor, 35%);
       border-left: 0;
       text-align: right;
-      background-color: AliceBlue;
     }
 
     li.solo{
-      border-right: 15px solid brown;
+      border-right: 15px solid lighten($brandcolor, 35%);
     }
   }
 
@@ -116,27 +107,25 @@
     }
 
     li:nth-of-type(5n+1){
-      border: 15px solid black;
+      border: 15px solid $brandcolor;
       border-right: 0;
-      background-color: AliceBlue;
     }
 
     li:nth-of-type(5n+2), li:nth-of-type(5n+3), li:nth-of-type(5n+4){
-      border: 15px solid red;
+      border: 15px solid lighten($brandcolor, 25%);
       border-left: 0;
       border-right: 0;
-      background-color: AliceBlue;
     }
 
 
     li:nth-of-type(5n+5){
-      border: 15px solid brown;
+      border: 15px solid lighten($brandcolor, 35%);
       border-left: 0;
       background-color: AliceBlue;
     }
 
     li.solo{
-      border-right: 15px solid red;
+      border-right:  15px solid lighten($brandcolor, 35%);
     }
   }
 }

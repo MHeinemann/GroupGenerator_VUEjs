@@ -67,36 +67,36 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 3, ../sass/layout.scss */
+/* line 3, ../sass/_layout.scss */
 h1 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-/* line 9, ../sass/layout.scss */
+/* line 9, ../sass/_layout.scss */
 nav ul {
   list-style-type: none;
   padding: 0;
 }
-/* line 13, ../sass/layout.scss */
+/* line 13, ../sass/_layout.scss */
 nav ul li {
   display: inline-block;
   margin: 0 10px;
 }
 
-/* line 19, ../sass/layout.scss */
+/* line 19, ../sass/_layout.scss */
 a {
-  color: #42b983;
+  color: blue;
   text-decoration: none;
 }
-/* line 23, ../sass/layout.scss */
+/* line 23, ../sass/_layout.scss */
 a:hover {
-  color: #276e4e;
+  color: #000099;
   text-decoration: underline;
 }
 
-/* line 29, ../sass/layout.scss */
+/* line 29, ../sass/_layout.scss */
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -109,7 +109,7 @@ a:hover {
   grid-template-areas: ". header ." ". main ." ". footer .";
 }
 
-/* line 46, ../sass/layout.scss */
+/* line 46, ../sass/_layout.scss */
 header {
   grid-area: header;
   display: flex;
@@ -117,160 +117,143 @@ header {
   flex-direction: column;
 }
 
-/* line 53, ../sass/layout.scss */
+/* line 53, ../sass/_layout.scss */
 main {
   grid-area: main;
 }
 
-/* line 57, ../sass/layout.scss */
+/* line 57, ../sass/_layout.scss */
 aside {
   grid-area: aside;
 }
 
-/* line 61, ../sass/layout.scss */
+/* line 61, ../sass/_layout.scss */
 footer {
   grid-area: footer;
   display: flex;
   justify-content: flex-end;
 }
 
-/* line 67, ../sass/layout.scss */
+/* line 67, ../sass/_layout.scss */
 .contacted {
   text-decoration: line-through;
 }
 
-/* line 1, ../sass/groups.scss */
+/* line 1, ../sass/_groups.scss */
 #groups {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-/* line 6, ../sass/groups.scss */
+/* line 6, ../sass/_groups.scss */
 #groups li {
   box-sizing: border-box;
+  background-color: AliceBlue;
 }
-/* line 11, ../sass/groups.scss */
+/* line 12, ../sass/_groups.scss */
 #groups.groupSize--1 li {
   padding: 1rem;
-  border: 1px solid black;
+  border: 3px solid blue;
   text-align: center;
   margin: 0.3rem;
 }
-/* line 19, ../sass/groups.scss */
-#groups.groupSize--2 {
-  background-color: white;
-}
-/* line 22, ../sass/groups.scss */
+/* line 22, ../sass/_groups.scss */
 #groups.groupSize--2 li {
   margin-bottom: 1.3rem;
   padding: 1rem 3rem;
 }
-/* line 27, ../sass/groups.scss */
+/* line 27, ../sass/_groups.scss */
 #groups.groupSize--2 li:nth-of-type(odd) {
-  border: 15px solid black;
-  border-right: 0;
-  background-color: AliceBlue;
-}
-/* line 33, ../sass/groups.scss */
-#groups.groupSize--2 li:nth-of-type(even) {
   border: 15px solid blue;
+  border-right: 0;
+}
+/* line 32, ../sass/_groups.scss */
+#groups.groupSize--2 li:nth-of-type(even) {
+  border: 15px solid #8080ff;
   text-align: right;
   border-left: 0;
-  background-color: AliceBlue;
 }
-/* line 40, ../sass/groups.scss */
+/* line 38, ../sass/_groups.scss */
 #groups.groupSize--2 li.solo {
-  border: 15px solid red;
+  border-right: 15px solid #8080ff;
 }
-/* line 45, ../sass/groups.scss */
-#groups.groupSize--3 {
-  background-color: white;
-}
-/* line 48, ../sass/groups.scss */
+/* line 45, ../sass/_groups.scss */
 #groups.groupSize--3 li {
   margin-bottom: 1.3rem;
   padding: 1rem 3rem;
 }
-/* line 53, ../sass/groups.scss */
+/* line 50, ../sass/_groups.scss */
 #groups.groupSize--3 li:nth-of-type(3n+1) {
-  border: 15px solid black;
+  border: 15px solid blue;
   border-right: 0;
-  background-color: AliceBlue;
 }
-/* line 59, ../sass/groups.scss */
+/* line 55, ../sass/_groups.scss */
 #groups.groupSize--3 li:nth-of-type(3n+2) {
-  border: 15px solid red;
+  border: 15px solid #8080ff;
   border-right: 0;
   border-left: 0;
   text-align: center;
-  background-color: AliceBlue;
 }
-/* line 67, ../sass/groups.scss */
+/* line 62, ../sass/_groups.scss */
 #groups.groupSize--3 li:nth-of-type(3n+3) {
-  border: 15px solid green;
+  border: 15px solid #b3b3ff;
   border-left: 0;
   text-align: right;
-  background-color: AliceBlue;
 }
-/* line 74, ../sass/groups.scss */
+/* line 68, ../sass/_groups.scss */
 #groups.groupSize--3 li.solo {
-  border-right: 15px solid red;
+  border-right: 15px solid #b3b3ff;
 }
-/* line 80, ../sass/groups.scss */
+/* line 74, ../sass/_groups.scss */
 #groups.groupSize--4 li {
   margin-bottom: 1.3rem;
   padding: 1rem 3rem;
 }
-/* line 85, ../sass/groups.scss */
+/* line 79, ../sass/_groups.scss */
 #groups.groupSize--4 li:nth-of-type(4n+1) {
-  border: 15px solid black;
+  border: 15px solid blue;
   border-right: 0;
-  background-color: AliceBlue;
 }
-/* line 91, ../sass/groups.scss */
+/* line 84, ../sass/_groups.scss */
 #groups.groupSize--4 li:nth-of-type(4n+2), #groups.groupSize--4 li:nth-of-type(4n+3) {
-  border: 15px solid red;
+  border: 15px solid #8080ff;
   border-left: 0;
   text-align: center;
   border-right: 0;
-  background-color: AliceBlue;
 }
-/* line 100, ../sass/groups.scss */
+/* line 92, ../sass/_groups.scss */
 #groups.groupSize--4 li:nth-of-type(4n+4) {
-  border: 15px solid brown;
+  border: 15px solid #b3b3ff;
   border-left: 0;
   text-align: right;
-  background-color: AliceBlue;
 }
-/* line 107, ../sass/groups.scss */
+/* line 98, ../sass/_groups.scss */
 #groups.groupSize--4 li.solo {
-  border-right: 15px solid brown;
+  border-right: 15px solid #b3b3ff;
 }
-/* line 113, ../sass/groups.scss */
+/* line 104, ../sass/_groups.scss */
 #groups.groupSize--5 li {
   margin-bottom: 1.3rem;
   padding: 1rem 3rem;
 }
-/* line 118, ../sass/groups.scss */
+/* line 109, ../sass/_groups.scss */
 #groups.groupSize--5 li:nth-of-type(5n+1) {
-  border: 15px solid black;
+  border: 15px solid blue;
   border-right: 0;
-  background-color: AliceBlue;
 }
-/* line 124, ../sass/groups.scss */
+/* line 114, ../sass/_groups.scss */
 #groups.groupSize--5 li:nth-of-type(5n+2), #groups.groupSize--5 li:nth-of-type(5n+3), #groups.groupSize--5 li:nth-of-type(5n+4) {
-  border: 15px solid red;
+  border: 15px solid #8080ff;
   border-left: 0;
   border-right: 0;
-  background-color: AliceBlue;
 }
-/* line 132, ../sass/groups.scss */
+/* line 121, ../sass/_groups.scss */
 #groups.groupSize--5 li:nth-of-type(5n+5) {
-  border: 15px solid brown;
+  border: 15px solid #b3b3ff;
   border-left: 0;
   background-color: AliceBlue;
 }
-/* line 138, ../sass/groups.scss */
+/* line 127, ../sass/_groups.scss */
 #groups.groupSize--5 li.solo {
-  border-right: 15px solid red;
+  border-right: 15px solid #b3b3ff;
 }

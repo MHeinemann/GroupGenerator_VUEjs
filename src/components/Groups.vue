@@ -1,7 +1,7 @@
 <template lang="html">
   <main id="users">
     <h1>{{ title }}</h1>
-    <ul id="groups" :class="['groupSize--'+groupSize]">
+    <ul id="groups" :class="['groupSize--'+groupSize]" @keyup.space='handleClick'>
         <li class="singleMember" v-for="(azubi, index) in azubis" v-bind:style="{ 'width': fullNumber }" v-bind:class="{'solo': azubis.length%groupSize!=0&&index==azubis.length-1}">
         {{ azubi.name }}
       </li>
@@ -35,12 +35,20 @@ export default {
     return {
       title: 'Gruppenzusammenstellung',
       azubis: Json.azubis,
-      groupSize: 2,
+      groupSize: 1,
       width: 100 +'%',
       checked: false
     };
   },
   methods: {
+    action(event) {
+         if (event.shiftKey) {
+           this.shiftKeyPressed()
+         } else {
+           this.shiftKeyNotPressed()
+         }
+      },
+
     randomize: function(a, b){
       function shuffle() {
         //return( parseInt( Math.random()*10 ) %2 );

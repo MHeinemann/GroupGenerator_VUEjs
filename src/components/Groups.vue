@@ -2,27 +2,31 @@
   <main id="users">
     <h1>{{ title }}</h1>
     <ul id="groups" :class="['groupSize--'+groupSize]" @keyup.space='handleClick'>
-        <li class="singleMember" v-for="(azubi, index) in azubis" v-bind:style="{ 'width': fullNumber }" v-bind:class="{'solo': azubis.length%groupSize!=0&&index==azubis.length-1}">
+      <li class="singleMember" v-for="(azubi, index) in azubis" v-bind:style="{ 'width': fullNumber }" v-bind:class="{'solo': azubis.length%groupSize!=0&&index==azubis.length-1}">
         {{ azubi.name }}
       </li>
     </ul>
 
-    <label for="groupInput">Gruppengröße:</label>
-    <input id="groupInput" type="number" name="points" min="1" max="5" value="groupSize" v-model.number="groupSize">
+    <div id="input-menu">
+      <label for="groupInput">Gruppengröße:</label>
+      <input id="groupInput" type="number" name="points" min="1" max="5" value="groupSize" v-model.number="groupSize">
+      <span class="abstand">|</span>
+      <input type="checkbox" id="zeigeCode" v-model="checked"><label for="zeigeCode">zeige json</label>
+      <br>
+      <button v-on:click="randomize()">Shuffle</button>
+      <button v-on:click="changeOrder()">Tausch</button>
 
-    <button v-on:click="randomize()">Shuffle</button>
-    <button v-on:click="changeOrder()">Tausch</button>
+    </div>
 
-    <input type="checkbox" id="zeigeCode" v-model="checked"><label for="zeigeCode">zeige json</label>
-
-    <br>
-    <code v-if="checked">
-      {<br>
-        &nbsp;&nbsp;"azubis": [<br>
-        <p v-for="(azubi, index) in azubis">&nbsp;&nbsp;&nbsp;&nbsp;{ "name" : "{{azubi.name}}" }<span v-if="index != (azubis.length-1)">,</span></p><br>
-        &nbsp;&nbsp;]<br>
-      }
-    </code>
+    <div id="json-code" v-if="checked">
+      <code>
+        {<br>
+          &nbsp;&nbsp;<span style="color:crimson;">"azubis"</span>: [<br>
+          <p v-for="(azubi, index) in azubis">&nbsp;&nbsp;&nbsp;&nbsp;{ <span style="color:crimson;">"name"</span> : <span style="color:limegreen;">"{{azubi.name}}"</span> }<span v-if="index != (azubis.length-1)">,</span></p><br>
+          &nbsp;&nbsp;]<br>
+        }
+      </code>
+    </div>
   </main>
 </template>
 
@@ -42,12 +46,12 @@ export default {
   },
   methods: {
     action(event) {
-         if (event.shiftKey) {
-           this.shiftKeyPressed()
-         } else {
-           this.shiftKeyNotPressed()
-         }
-      },
+      if (event.shiftKey) {
+        this.shiftKeyPressed()
+      } else {
+        this.shiftKeyNotPressed()
+      }
+    },
 
     randomize: function(a, b){
       function shuffle() {

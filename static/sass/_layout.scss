@@ -34,13 +34,25 @@ a {
   margin-top: 60px;
 
   display: grid;
-  grid-template-rows:100px 1fr 100px;
-  grid-template-columns:20% 60% 20%;
+  grid-template-rows:1rem 1fr 1rem;
+  grid-template-columns:10% 80% 10%;
   grid-template-areas:
   ". header ."
   ". main ."
   ". footer ."
   ;
+}
+
+@media only screen and (min-width: 600px) {
+  #app{
+    grid-template-columns:20% 60% 20%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #app{
+    grid-template-columns:30% 30% 30%;
+  }
 }
 
 header {
@@ -64,6 +76,29 @@ footer {
   justify-content: flex-end;
 }
 
+button{
+  padding: 0.3rem 0.5rem;
+}
+
 .contacted{
   text-decoration: line-through;
+}
+
+#json-code{
+  padding: 1rem;
+  background-color: #404052;
+  border: 3px solid black;
+  color: white;
+}
+
+#input-menu{
+  margin: 1rem 0;
+
+  input{
+    margin-bottom: 1rem;
+  }
+}
+
+.abstand{
+  margin: 0 1rem;
 }

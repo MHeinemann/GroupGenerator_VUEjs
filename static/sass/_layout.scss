@@ -1,4 +1,8 @@
-$brandcolor: blue;
+$brandcolor: red;
+
+html{
+  box-sizing: border-box;
+}
 
 h1{
   font-size: 1.8rem;
@@ -35,23 +39,28 @@ a {
 
   display: grid;
   grid-template-rows:1rem 1fr 1rem;
-  grid-template-columns:10% 80% 10%;
+  grid-template-columns:100%;
   grid-template-areas:
-  ". header ."
-  ". main ."
-  ". footer ."
+  "header"
+  "main"
+  "footer"
   ;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   #app{
-    grid-template-columns:20% 60% 20%;
+    grid-template-columns:10% 80% 10%;
+    grid-template-areas:
+    ". header ."
+    ". main ."
+    ". footer ."
+    ;
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
   #app{
-    grid-template-columns:30% 30% 30%;
+    grid-template-columns:25% 50% 25%;
   }
 }
 

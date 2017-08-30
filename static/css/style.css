@@ -68,35 +68,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 3, ../sass/_layout.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 7, ../sass/_layout.scss */
 h1 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-/* line 9, ../sass/_layout.scss */
+/* line 13, ../sass/_layout.scss */
 nav ul {
   list-style-type: none;
   padding: 0;
 }
-/* line 13, ../sass/_layout.scss */
+/* line 17, ../sass/_layout.scss */
 nav ul li {
   display: inline-block;
   margin: 0 10px;
 }
 
-/* line 19, ../sass/_layout.scss */
+/* line 23, ../sass/_layout.scss */
 a {
-  color: blue;
+  color: red;
   text-decoration: none;
 }
-/* line 23, ../sass/_layout.scss */
+/* line 27, ../sass/_layout.scss */
 a:hover {
-  color: #000099;
+  color: #990000;
   text-decoration: underline;
 }
 
-/* line 29, ../sass/_layout.scss */
+/* line 33, ../sass/_layout.scss */
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -105,23 +110,24 @@ a:hover {
   margin-top: 60px;
   display: grid;
   grid-template-rows: 1rem 1fr 1rem;
-  grid-template-columns: 10% 80% 10%;
-  grid-template-areas: ". header ." ". main ." ". footer .";
+  grid-template-columns: 100%;
+  grid-template-areas: "header" "main" "footer";
 }
 
-@media only screen and (min-width: 600px) {
-  /* line 47, ../sass/_layout.scss */
+@media only screen and (min-width: 700px) {
+  /* line 51, ../sass/_layout.scss */
   #app {
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: ". header ." ". main ." ". footer .";
   }
 }
-@media only screen and (min-width: 1000px) {
-  /* line 53, ../sass/_layout.scss */
+@media only screen and (min-width: 1200px) {
+  /* line 62, ../sass/_layout.scss */
   #app {
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 25% 50% 25%;
   }
 }
-/* line 58, ../sass/_layout.scss */
+/* line 67, ../sass/_layout.scss */
 header {
   grid-area: header;
   display: flex;
@@ -129,34 +135,34 @@ header {
   flex-direction: column;
 }
 
-/* line 65, ../sass/_layout.scss */
+/* line 74, ../sass/_layout.scss */
 main {
   grid-area: main;
 }
 
-/* line 69, ../sass/_layout.scss */
+/* line 78, ../sass/_layout.scss */
 aside {
   grid-area: aside;
 }
 
-/* line 73, ../sass/_layout.scss */
+/* line 82, ../sass/_layout.scss */
 footer {
   grid-area: footer;
   display: flex;
   justify-content: flex-end;
 }
 
-/* line 79, ../sass/_layout.scss */
+/* line 88, ../sass/_layout.scss */
 button {
   padding: 0.3rem 0.5rem;
 }
 
-/* line 83, ../sass/_layout.scss */
+/* line 92, ../sass/_layout.scss */
 .contacted {
   text-decoration: line-through;
 }
 
-/* line 87, ../sass/_layout.scss */
+/* line 96, ../sass/_layout.scss */
 #json-code {
   padding: 1rem;
   background-color: #404052;
@@ -164,16 +170,16 @@ button {
   color: white;
 }
 
-/* line 94, ../sass/_layout.scss */
+/* line 103, ../sass/_layout.scss */
 #input-menu {
   margin: 1rem 0;
 }
-/* line 97, ../sass/_layout.scss */
+/* line 106, ../sass/_layout.scss */
 #input-menu input {
   margin-bottom: 1rem;
 }
 
-/* line 102, ../sass/_layout.scss */
+/* line 111, ../sass/_layout.scss */
 .abstand {
   margin: 0 1rem;
 }
@@ -192,7 +198,7 @@ button {
 /* line 12, ../sass/_groups.scss */
 #groups.groupSize--1 li {
   padding: 1rem;
-  border: 3px solid blue;
+  border: 3px solid red;
   text-align: center;
   margin: 0.3rem;
 }
@@ -203,18 +209,18 @@ button {
 }
 /* line 27, ../sass/_groups.scss */
 #groups.groupSize--2 li:nth-of-type(odd) {
-  border: 15px solid blue;
+  border: 15px solid red;
   border-right: 0;
 }
 /* line 32, ../sass/_groups.scss */
 #groups.groupSize--2 li:nth-of-type(even) {
-  border: 15px solid #8080ff;
+  border: 15px solid #ff8080;
   text-align: right;
   border-left: 0;
 }
 /* line 38, ../sass/_groups.scss */
 #groups.groupSize--2 li.solo {
-  border-right: 15px solid #8080ff;
+  border-right: 15px solid #ff8080;
 }
 /* line 45, ../sass/_groups.scss */
 #groups.groupSize--3 li {
@@ -223,25 +229,25 @@ button {
 }
 /* line 50, ../sass/_groups.scss */
 #groups.groupSize--3 li:nth-of-type(3n+1) {
-  border: 15px solid blue;
+  border: 15px solid red;
   border-right: 0;
 }
 /* line 55, ../sass/_groups.scss */
 #groups.groupSize--3 li:nth-of-type(3n+2) {
-  border: 15px solid #8080ff;
+  border: 15px solid #ff8080;
   border-right: 0;
   border-left: 0;
   text-align: center;
 }
 /* line 62, ../sass/_groups.scss */
 #groups.groupSize--3 li:nth-of-type(3n+3) {
-  border: 15px solid #b3b3ff;
+  border: 15px solid #ffb3b3;
   border-left: 0;
   text-align: right;
 }
 /* line 68, ../sass/_groups.scss */
 #groups.groupSize--3 li.solo {
-  border-right: 15px solid #b3b3ff;
+  border-right: 15px solid #ffb3b3;
 }
 /* line 74, ../sass/_groups.scss */
 #groups.groupSize--4 li {
@@ -250,25 +256,25 @@ button {
 }
 /* line 79, ../sass/_groups.scss */
 #groups.groupSize--4 li:nth-of-type(4n+1) {
-  border: 15px solid blue;
+  border: 15px solid red;
   border-right: 0;
 }
 /* line 84, ../sass/_groups.scss */
 #groups.groupSize--4 li:nth-of-type(4n+2), #groups.groupSize--4 li:nth-of-type(4n+3) {
-  border: 15px solid #8080ff;
+  border: 15px solid #ff8080;
   border-left: 0;
   text-align: center;
   border-right: 0;
 }
 /* line 92, ../sass/_groups.scss */
 #groups.groupSize--4 li:nth-of-type(4n+4) {
-  border: 15px solid #b3b3ff;
+  border: 15px solid #ffb3b3;
   border-left: 0;
   text-align: right;
 }
 /* line 98, ../sass/_groups.scss */
 #groups.groupSize--4 li.solo {
-  border-right: 15px solid #b3b3ff;
+  border-right: 15px solid #ffb3b3;
 }
 /* line 104, ../sass/_groups.scss */
 #groups.groupSize--5 li {
@@ -277,22 +283,22 @@ button {
 }
 /* line 109, ../sass/_groups.scss */
 #groups.groupSize--5 li:nth-of-type(5n+1) {
-  border: 15px solid blue;
+  border: 15px solid red;
   border-right: 0;
 }
 /* line 114, ../sass/_groups.scss */
 #groups.groupSize--5 li:nth-of-type(5n+2), #groups.groupSize--5 li:nth-of-type(5n+3), #groups.groupSize--5 li:nth-of-type(5n+4) {
-  border: 15px solid #8080ff;
+  border: 15px solid #ff8080;
   border-left: 0;
   border-right: 0;
 }
 /* line 121, ../sass/_groups.scss */
 #groups.groupSize--5 li:nth-of-type(5n+5) {
-  border: 15px solid #b3b3ff;
+  border: 15px solid #ffb3b3;
   border-left: 0;
   background-color: AliceBlue;
 }
 /* line 127, ../sass/_groups.scss */
 #groups.groupSize--5 li.solo {
-  border-right: 15px solid #b3b3ff;
+  border-right: 15px solid #ffb3b3;
 }

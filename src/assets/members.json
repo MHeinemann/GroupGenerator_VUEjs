@@ -1,15 +1,1 @@
-{
-  "azubis": [
-    { "name" : "Michael" },
-    { "name" : "A" },
-    { "name" : "B" },
-    { "name" : "B" },
-    { "name" : "C" },
-    { "name" : "C" },
-    { "name" : "D" },
-    { "name" : "D" },
-    { "name" : "E" },
-    { "name" : "Josh" },
-    { "name" : "F" }
-  ]
-}
+{"azubis": [{"name": "klaus"}, {"name": "pascal"}, {"name": "michael"}, {"name": "julian"}, {"name": "tina"}, {"name": "david"}]}
